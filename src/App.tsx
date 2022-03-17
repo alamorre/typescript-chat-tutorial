@@ -1,26 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+const projectId = "90da2e14-0910-4d15-ad84-c52b5dbc81be";
+const username = "adam";
+// file deepcode ignore HardcodedNonCryptoSecret: <tutorial>
+const secret = "pass1234";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  console.log(projectId, username, secret);
+  return <div></div>;
 }
 
 export default App;
