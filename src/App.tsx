@@ -1,4 +1,8 @@
-import { useMultiChatLogic, ChatWindow } from "react-chat-engine-advanced";
+import {
+  useMultiChatLogic,
+  MultiChatSocket,
+  ChatWindow,
+} from "react-chat-engine-advanced";
 
 const projectId = "90da2e14-0910-4d15-ad84-c52b5dbc81be";
 const username = "adam";
@@ -16,6 +20,22 @@ function App() {
 
   return (
     <div>
+      <MultiChatSocket
+        projectId={chatProps.projectId}
+        username={chatProps.username}
+        secret={chatProps.secret}
+        onSocketMount={chatProps.onSocketMount}
+        onConnect={chatProps.onConnect}
+        onAuthFail={chatProps.onAuthFail}
+        onNewChat={chatProps.onNewChat}
+        onEditChat={chatProps.onEditChat}
+        onDeleteChat={chatProps.onDeleteChat}
+        onNewMessage={chatProps.onNewMessage}
+        onEditMessage={chatProps.onEditMessage}
+        onDeleteMessage={chatProps.onDeleteMessage}
+        onIsTyping={chatProps.onIsTyping}
+      />
+
       <ChatWindow
         chats={chatProps.chats}
         messages={chatProps.messages}
